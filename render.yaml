@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: flask-app
+    name: anchor-explainer
     env: python
+    plan: free
     buildCommand: pip install --prefer-binary -r requirements.txt
     startCommand: gunicorn app:app
+    build:
+      pythonVersion: 3.10
